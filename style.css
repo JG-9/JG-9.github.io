@@ -1,0 +1,386 @@
+h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4vw;
+  color: #DF744A;
+  margin: 0; 
+  padding: 0.5%;
+  text-align: center; 
+}
+
+a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2vw;
+  color: #DF744A;
+  margin-left: 80%; 
+}
+
+#header{
+  background-color:#BFDBD2;  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding-bottom: 1%; 
+  margin: 0%;
+  border: 0%;
+  z-index: 1;
+  /*(Keeps this on top of everything*/
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4vw;
+  color: white;
+  padding-top: 8vw;
+  padding-left: 4%;
+}
+
+
+h2 {
+  font-family: Georgia;
+  font-size: 2vw;
+  font-weight: lighter;
+  padding-left: 4%;
+}
+
+h4 {
+  padding-left: 4%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 2vw;
+  padding-right: 2.5%;
+  margin-bottom: 0.25%; 
+  color: #df744a; 
+}
+
+/*actual quiz format*/
+h5 {
+  font-family: sans-serif;
+  color:#dcb239;
+  font-size: 2vw;
+  padding-left: 4%;
+  margin-bottom: 0px;
+  margin-top: 2.5%;
+}
+
+/* Questions after question 1 for spacing*/
+h7 {
+  font-family: sans-serif;
+  font-weight: bold; 
+  color: #dcb239;
+  font-size: 2vw; 
+  margin-bottom: 0px;
+  padding-left: 4%;
+}
+
+h8 {
+  font-family: sans-serif;
+  font-weight: bold; 
+  color:#dcb239;
+  font-size: 2vw; 
+  margin-bottom: 1%;
+  padding-top: 2.5%;  
+  padding-left: 4%;
+}
+
+
+h6 {
+  font-family: sans-serif;
+  font-size: 1.75vw;
+  color: #dcb239;
+  padding-left: 4%;
+  padding-bottom: 3.5%;
+  padding-top: 1%;
+  margin-bottom: 0px;
+  margin-top: 0px; 
+}
+
+h9 {
+  font-family: sans-serif;
+  font-size: 1.75vw;
+  color: #dcb239;
+  padding-left: 4%;
+  padding-bottom: 3.5%;
+  padding-right: 1%; 
+  margin-bottom: 0px;
+  margin-top: 0px;
+  line-height: 2.5; 
+  font-weight: bold; 
+}
+
+.question4choices {
+  font-family: sans-serif;
+  font-size: 1.75vw;
+  color: #dcb239;
+  padding-left: 4%;
+  height: auto; 
+  padding-bottom: 1%;
+  padding-right: 1%; 
+  margin-bottom: 0px;
+  margin-top: 0px;
+  line-height: 1.75; 
+}
+
+/* Image Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  position: left;
+  width: 70vw; 
+}
+
+/* Create two equal columns that sits next to each other*/
+.column {
+  flex: 10%;
+  height: 26vw; 
+  width: 30vw; 
+  padding-left: 4%; 
+}
+
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  padding: 0%;
+}
+
+/* Displays Answer */
+.container {
+  position: relative;
+  width: 19vw;
+  margin: 0;
+  border: 0;
+  padding: 0; 
+  left:0; 
+  vertical-align: middle;
+}
+
+.image {
+  display: block;
+  max-width: 35vw;
+  max-height: auto; 
+}
+
+.overlay {
+  position: absolute;
+  width: 35vw;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #dcb239;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #DF744A;
+  font-size: 2.1vw;
+  position: absolute;
+  padding-left: 5%;
+  padding-top: 5%;
+  top: 2vw; 
+  padding-bottom: 5%;
+  margin: 0; 
+  padding-right: 5%; 
+  text-align: center;
+}
+
+.toothpaste {
+  position: relative;
+  max-width: 35vw;
+  max-height: 20vw; 
+  padding-top: 1%; 
+  padding-left: 4%; 
+  padding-bottom: 2%; 
+}
+
+/* Zooms in on skull photo if they hover */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 60px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  padding-right: 5%; 
+  padding-left: 5%; 
+  display: block;
+  width: auto; 
+  height: auto; 
+}
+
+.image_container{ /* Keeps image and caption centered */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -40%); 
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  font-size: 3vh; 
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 10vw;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(0.125)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(0.125)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/*Footer of webpage*/
+body {
+   margin:0;
+   padding-top:5vh;
+   padding-right: 5vh; 
+   height:auto;
+   width: auto;
+   overflow-x: hidden;
+   overflow-y: scroll; 
+}
+#container {
+   margin-top: 3vw;
+   height:100%;
+   position:relative;
+}
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+.footer {
+   position:absolute;
+   bottom:0;
+   width:100vw;
+   height:3.5vw;   /* Height of the footer */
+   background-color: #BFDBD2;
+   z-index: -1;  
+}
+
+/* Share to social media - facebook, twitter, pinterest, instagram */
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa {
+  padding: 4px;
+  font-size: 1.5vw;
+  width: 1.5vw;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0; 
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.social-footer {
+  position: relative; 
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 0.7%; 
+  padding-top: 0.7%;  
+  z-index: 1; 
+}
+
+.social-footer .social-footer-icons li:last-of-type {
+  height: 1.5vw; 
+}
+
+ul {
+  margin-top: 0; 
+  margin-bottom: 0; 
+}
